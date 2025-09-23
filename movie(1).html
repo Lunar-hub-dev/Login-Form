@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -44,11 +45,25 @@
             rgba(255, 255, 255, 0) 60%
           ),
           linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.35)),
-          url("https://i.pinimg.com/736x/8c/92/0d/8c920d9c2c29f6afb75c16b5fb60fba0.jpg");
+          url("https://i.pinimg.com/1200x/84/13/97/8413971eeaa53e407347488d16a96879.jpg");
+
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
         overflow: hidden;
+      }
+
+      .image {
+        display: flex;
+      }
+
+      .image img {
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 200px;
+        width: 350px;
+        border-radius: 40px;
+        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.45);
       }
 
       /* Navbar */
@@ -108,13 +123,19 @@
       }
       /* Center text */
       .center-text {
-        font-size: 20rem;
+        display: flex;
+        justify-content: flex-end;
         font-weight: bold;
         text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
         font-family: "Chela One", system-ui;
-        font-style: normal;
-        font-size: 80px;
-        text-align: center;
+        font-style: normal; /* moves h1 to the right */
+      }
+
+      .center-text h1 {
+        font-weight: bold;
+        font-size: 150px;
+        margin-top: -500px;
+        margin-right: 350px;
       }
       .highlight {
         color: rgb(192, 205, 50);
@@ -127,6 +148,75 @@
         padding: 1rem 2rem;
         font-size: 1rem;
         font-weight: bold;
+      }
+
+      /* Watch link styling */
+      .watch {
+        margin-top: 10px;
+        display: flex;
+        justify-content: start;
+        margin-left: 300px;
+        align-items: center;
+      }
+
+      .Watch {
+        color: white;
+        font-weight: 300;
+        font-family: "Chela One", system-ui;
+        font-style: normal;
+        cursor: pointer;
+        padding: 8px 20px;
+        font-size: 18px;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+      }
+
+      .Watch:hover {
+        font-size: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        text-shadow: 0 0 5px #fff;
+      }
+
+      .Watch:active {
+        color: black;
+      }
+
+      /* Pagination styling */
+      .small-bar {
+        position: absolute;
+        bottom: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .small-bar a {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(4px);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .small-bar a:hover {
+        background: white;
+        color: #0b1220;
+        transform: translateY(-4px);
+      }
+
+      a {
+        display: inline-block;
       }
 
       @media (max-width: 900px) {
@@ -144,7 +234,7 @@
   <body>
     <!-- Navbar -->
     <nav class="nav">
-      <div class="brand">FAVORITE LISTS</div>
+      <div class="brand">FAVORITE MOVIE</div>
       <div class="nav-items">
         <a class="pill-light" href="index.html">Home</a>
         <a class="pill-light" href="fav.html">Content</a>
@@ -152,10 +242,28 @@
       </div>
     </nav>
 
-    <!-- Center Text -->
+    <div class="image">
+      <img
+        src="https://i.pinimg.com/736x/9e/93/21/9e9321195595f8021e48dc114ced2433.jpg"
+        alt="The Untamed"
+      />
+    </div>
+
     <div class="center-text">
-      WELCOME TO MY<br />
-      FAVORITE LIST <span class="highlight">●</span>
+      <h1>The<br />Untamed</h1>
+    </div>
+
+    <div class="watch">
+      <a href="https://t.kisskh.id/YYpy" class="Watch">Click To Watch</a>
+    </div>
+
+    <!-- Pagination Bar -->
+    <div class="small-bar">
+      <a href="movie(1).html">1</a>
+      <a href="movie(2).html">2</a>
+      <a href="movie(3).html">3</a>
+      <a href="movie(4).html">4</a>
+      <a href="movie(5).html">5</a>
     </div>
 
     <!-- Footer -->
